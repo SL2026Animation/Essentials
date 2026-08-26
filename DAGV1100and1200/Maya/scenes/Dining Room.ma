@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Dining Room.ma
-//Last modified: Wed, Aug 26, 2026 03:39:09 PM
+//Last modified: Wed, Aug 26, 2026 03:46:43 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.1.1";
@@ -10,7 +10,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "89AB8BD2-4022-8759-62F3-0F8C6B37A6FB";
+fileInfo "UUID" "6B520BF7-4623-B96B-F286-72BD2E6AA57D";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "8C482FAC-4C2F-A8AF-400B-9CAFBF2151EA";
