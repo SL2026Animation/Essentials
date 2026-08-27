@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Dining Room.ma
-//Last modified: Thu, Aug 27, 2026 03:06:20 PM
+//Last modified: Thu, Aug 27, 2026 02:58:46 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "4D209D7E-4113-ADDE-F08B-04A51E2326C3";
+fileInfo "UUID" "A2212895-4B16-CABE-0483-4086E4280E48";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "8C482FAC-4C2F-A8AF-400B-9CAFBF2151EA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.59993768115703638 0.87398457567184329 3.2688033539764914 ;
+	setAttr ".t" -type "double3" -0.76670273876272943 1.0104006947319215 4.1774346947788423 ;
 	setAttr ".r" -type "double3" -8.400000000000011 -10.399999999999997 1.0105247736958073e-16 ;
 	setAttr ".rpt" -type "double3" -4.8829928031828785e-18 7.3696207488912165e-17 -1.1043519673828132e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FAFFE216-4CAE-8263-70E8-CB80A0F4A510";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.3594409237368335;
+	setAttr ".coi" 4.2932668472717967;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -141,7 +141,6 @@ createNode transform -n "Table1";
 	setAttr ".sp" -type "double3" 0.30641458255603904 0.38322727125586653 0 ;
 createNode transform -n "polySurface1" -p "Table1";
 	rename -uid "E93BF17A-4EFB-9C48-FB3B-8298DF139C8A";
-	setAttr ".t" -type "double3" 0.026100912725044723 0 0 ;
 createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	rename -uid "9E1CD2BA-48EA-1F2D-0F93-E6A077785DC5";
 	setAttr -k off ".v";
