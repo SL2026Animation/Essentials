@@ -1,0 +1,5 @@
+DAGV 1200 Unit 1 Reflection
+
+To start, I created a plane for the table and extruded all faces to give it depth. Because the plane comes with numerous faces already, I could extrude the corners without needing to add edge loops. It was fast, but not necessarily neater or simpler than other options I could have chosen. I then selected all the outer edges on the top of the table and legs, then beveled all at once.
+
+I repeated the same process to create the chair, though I adjusted the extrusion on the back portion of the chair to give it a bit of an angle. The floor remained as a normal plane with no changes other than scale, which I increased to 20.
