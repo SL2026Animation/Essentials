@@ -252,8 +252,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.36, y: 0.36, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.36, y: 0.30484065, z: 0.2}
+  m_Center: {x: 0, y: -0.027579779, z: 0}
 --- !u!1 &38181002
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,8 +361,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.23954979, y: 0.24, z: 0.2}
+  m_Center: {x: 0.001838708, y: 0, z: 0}
 --- !u!1 &51751406
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,8 +725,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.22116318, y: 0.22896814, z: 0.2}
+  m_Center: {x: 0, y: 0.005515933, z: 0}
 --- !u!1 &465124340
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,8 +997,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.23219518, y: 0.24, z: 0.2}
+  m_Center: {x: 0.0055159093, y: 0, z: 0}
 --- !u!212 &644712620
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1106,8 +1106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.2174859, y: 0.24, z: 0.2}
+  m_Center: {x: -0.0018386365, y: 0, z: 0}
 --- !u!212 &689659672
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2026,8 +2026,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.22851793, y: 0.24, z: 0.2}
+  m_Center: {x: -0.0036772608, y: 0, z: 0}
 --- !u!1 &2109146672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,8 +2261,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.24, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.2358725, y: 0.24, z: 0.2}
+  m_Center: {x: -0.007354617, y: 0, z: 0}
 --- !u!212 &2129714843
 SpriteRenderer:
   m_ObjectHideFlags: 0

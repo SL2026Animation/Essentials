@@ -1,0 +1,6 @@
+DAGV 1700 Unit 1 Reflection
+
+For my level, I decided to include a platform and some smaller boxes to encourage precise jumps. There’s spikes at the end in case you fall, and spike balls surrounding the main platform. I fiddled around with it a bit to try and make the two traps have an effect if you touch them, but wasn’t able to figure it out. I also adjusted all the colliders for the boxes, as they were a tad too wide.
+
+Most importantly of all, of course, I added an idle duck. He cannot move or affect gameplay in any way, but he is there to provide moral support even though he was selected from the Pixel Adventure 2 ‘Enemies’ folder.
+
