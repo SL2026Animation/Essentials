@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Dining Room.ma
-//Last modified: Wed, Sep 09, 2026 11:53:14 AM
+//Last modified: Wed, Sep 09, 2026 11:42:50 AM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "50AA4B05-43E0-2EC7-E6BD-46A88DE4EA06";
+fileInfo "UUID" "A35654A2-45C9-B11C-78A8-FD8AFE67B7A1";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "8C482FAC-4C2F-A8AF-400B-9CAFBF2151EA";
@@ -50,20 +50,20 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "B5D62A7A-43A4-5178-0DA3-1C814F6ADF7B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.1835322370958963 3.6785787123750229 4.6666239043146271 ;
-	setAttr ".r" -type "double3" -20.40000000000045 303.20000000025902 0 ;
+	setAttr ".t" -type "double3" -6.8880470976101966 4.207846327897264 7.114799243564117 ;
+	setAttr ".r" -type "double3" -23.399999999999181 308.40000000026913 0 ;
 	setAttr ".rpt" -type "double3" 1.1056179964355412e-15 1.1149749875381794e-15 9.7386314287214892e-16 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "24810CE9-4B3F-8384-7820-EEA306E94D97";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 9.415727894762842;
+	setAttr ".coi" 9.6302136918380867;
 	setAttr ".ow" 10.166129274068139;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
-	setAttr ".tp" -type "double3" -0.87501269578933716 0.51187801361083984 -1.8885090351104736 ;
+	setAttr ".tp" -type "double3" 0.038371384143829346 0.38322727382183075 1.6249876022338867 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "side";
