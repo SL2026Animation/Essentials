@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: AnimationPage102-117Starter.ma
-//Last modified: Mon, Sep 14, 2026 03:42:19 PM
+//Last modified: Mon, Sep 14, 2026 03:45:59 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_IK_v1_0_1" -rfn "Ultimate_Walker_IK_v1_0_1RN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Walker_IK_v1.0.1.ma";
@@ -18,12 +18,12 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "A759DFD2-4405-1E68-23D6-9DA13A792AC5";
+fileInfo "UUID" "69916189-4F8B-98C7-11FD-609B56951437";
 createNode transform -s -n "persp";
 	rename -uid "C9712CCD-754C-F86E-AD2A-73826B605734";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.18085480519256314 9.1737288650078543 -27.59993425555712 ;
-	setAttr ".r" -type "double3" -14.999999999999881 180.79999999996184 0 ;
+	setAttr ".t" -type "double3" 24.987968238245763 5.0614854876465269 -13.846759884768092 ;
+	setAttr ".r" -type "double3" -6.5999999999998948 119.19999999996101 0 ;
 	setAttr ".rpt" -type "double3" 3.500176206077063e-16 1.9286077899950406e-16 -1.3047824868495785e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "461DA5EF-F84A-C499-F69E-15ADE383DA43";
@@ -748,8 +748,8 @@ createNode animCurveTU -n "walker_rt_heel_ik_ctrl_toeTwist";
 createNode trackInfoManager -n "trackInfoManager1";
 	rename -uid "3B2A0D11-41CF-35A4-F72A-698CA544A7A1";
 select -ne :time1;
-	setAttr ".o" 10;
-	setAttr ".unw" 10;
+	setAttr ".o" 25;
+	setAttr ".unw" 25;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
