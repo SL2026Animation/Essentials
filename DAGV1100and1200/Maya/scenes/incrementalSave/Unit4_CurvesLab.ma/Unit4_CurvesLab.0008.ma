@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Unit4_CurvesLab.ma
-//Last modified: Thu, Sep 17, 2026 04:17:17 PM
+//Last modified: Thu, Sep 17, 2026 04:09:01 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "0F0AD293-4F3B-7414-5614-CFAC47862AC5";
+fileInfo "UUID" "869A400E-4B04-4F0F-E62F-9E9C7FC22FDE";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "F57B783C-49B2-8BAF-6143-76861FE44F2A";
@@ -35,20 +35,20 @@ createNode camera -s -n "perspShape" -p "persp";
 createNode transform -s -n "top";
 	rename -uid "E826C7A8-4E6E-2481-DBCC-2EBDFCE24602";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.3986613066333549 22.422008781260107 35.472361981631096 ;
-	setAttr ".r" -type "double3" -39.599999999983609 19.999999999996124 0 ;
+	setAttr ".t" -type "double3" 31.917940666815269 28.853110632367887 -1.7409189841632429 ;
+	setAttr ".r" -type "double3" -46.199999999996415 97.599999999985286 2.5444437451708134e-14 ;
 	setAttr ".rpt" -type "double3" -4.4896807036526945e-16 3.0066023139552891e-16 -6.2028764496380519e-17 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "F27E4F67-4E8B-B6C2-4DBC-DF84B9B37A67";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.661651649585675;
+	setAttr ".coi" 47.30086580734632;
 	setAttr ".ow" 62.519053017358473;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
-	setAttr ".tp" -type "double3" -0.40418608836915304 -0.4515250562228762 -1.8597947739352563 ;
+	setAttr ".tp" -type "double3" -1.1920928955078125e-07 0.058483110328267474 12.903704187703486 ;
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "front";
@@ -87,11 +87,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "Flower1";
+createNode transform -n "FlowerCenter";
 	rename -uid "35711202-4E6B-745F-997E-5089DC010EC1";
 	setAttr ".t" -type "double3" 0 0.058483110328267474 0 ;
 	setAttr ".s" -type "double3" 1 0.40174204216311032 1 ;
-createNode mesh -n "Flower1Shape" -p "Flower1";
+createNode mesh -n "FlowerCenterShape" -p "FlowerCenter";
 	rename -uid "59F2F02B-4512-1031-6C3D-4E84865F415C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -102,11 +102,11 @@ createNode mesh -n "Flower1Shape" -p "Flower1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "Petal1" -p "Flower1";
+createNode transform -n "Petal1" -p "FlowerCenter";
 	rename -uid "9DC491D5-4130-0E69-9A15-A0B8EB2255DA";
 	setAttr ".t" -type "double3" 0 0 0.065165137045582355 ;
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape1" -p "|Flower1|Petal1";
+createNode mesh -n "PetalShape1" -p "|FlowerCenter|Petal1";
 	rename -uid "91FE1BE2-4F59-6419-13CF-81B0D1314A95";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -750,10 +750,24 @@ createNode mesh -n "PetalShape1" -p "|Flower1|Petal1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal4" -p "Flower1";
+createNode transform -n "Petal5" -p "FlowerCenter";
+	rename -uid "A953B0F1-4A6C-7658-E12B-28B27E0F41E9";
+	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
+createNode mesh -n "PetalShape5" -p "|FlowerCenter|Petal5";
+	rename -uid "EFDB6691-4BFF-8C35-6FEC-F2B47BAE453C";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5694444477558136 0.9166666567325592 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "Petal4" -p "FlowerCenter";
 	rename -uid "B22C1223-466C-1B69-C9D8-F09A32C98DFE";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape4" -p "|Flower1|Petal4";
+createNode mesh -n "PetalShape4" -p "|FlowerCenter|Petal4";
 	rename -uid "1404E498-4210-D63D-01D5-DBB2B1861784";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1399,10 +1413,10 @@ createNode mesh -n "PetalShape4" -p "|Flower1|Petal4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal3" -p "Flower1";
+createNode transform -n "Petal3" -p "FlowerCenter";
 	rename -uid "404365D9-42FD-3667-7212-8E80EB37ACB6";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape3" -p "|Flower1|Petal3";
+createNode mesh -n "PetalShape3" -p "|FlowerCenter|Petal3";
 	rename -uid "D1462D5C-4100-9E0C-149E-FE8D91D76CA8";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2047,10 +2061,10 @@ createNode mesh -n "PetalShape3" -p "|Flower1|Petal3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal2" -p "Flower1";
+createNode transform -n "Petal2" -p "FlowerCenter";
 	rename -uid "3679DC2C-496D-A95B-2667-9BA87A2FC462";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape2" -p "|Flower1|Petal2";
+createNode mesh -n "PetalShape2" -p "|FlowerCenter|Petal2";
 	rename -uid "07786D60-48A5-33EB-A992-86AF003BACC9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -2696,7 +2710,7 @@ createNode mesh -n "PetalShape2" -p "|Flower1|Petal2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal3Curve7" -p "Flower1";
+createNode transform -n "Petal3Curve7" -p "FlowerCenter";
 	rename -uid "AD022E7B-4DA1-58A9-590E-8E8C8DE7C4FE";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -2705,7 +2719,7 @@ createNode transform -n "Petal3Curve7" -p "Flower1";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal3CurveShape7" -p "|Flower1|Petal3Curve7";
+createNode nurbsCurve -n "Petal3CurveShape7" -p "|FlowerCenter|Petal3Curve7";
 	rename -uid "281275B5-4C23-CBCC-CBB9-BB98CEB1E902";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -2714,23 +2728,23 @@ createNode nurbsCurve -n "Petal3CurveShape7" -p "|Flower1|Petal3Curve7";
 		 0.41666666666666669 0.5 0.58333333333333337 0.66666666666666663 0.75 0.83333333333333337
 		 0.91666666666666663 1 1 1
 		15
-		0.072909611429606669 -0.027811479442834047 -1.2578416346774659
-		0.068994151646071006 -0.023458138192752137 -1.3155595484547007
-		0.058376004526129725 -0.015357079302965787 -1.4308410444324084
-		0.037554419817542664 -0.007247187219149076 -1.6027449542725987
-		0.017902022765316036 -0.0025980617286139873 -1.7737515190582551
-		-4.2458020785632322e-06 -0.0082535784241642984 -1.9438477322249057
-		-0.013013918449994078 -0.020697449353662606 -2.1137715352465176
-		-0.023833010283587572 -0.055125685512658208 -2.2767687290035004
-		-0.029476212234971808 -0.10130105258408831 -2.4351081473429064
-		-0.031775859615021565 -0.14616381941408732 -2.5924044718632797
-		-0.032425417345339796 -0.17890350403619182 -2.7524593720115638
-		-0.029184008281941235 -0.19429889514288845 -2.9174658555140156
-		-0.020140016426587824 -0.19036292023983403 -3.0865431852387273
-		-0.014632165680741889 -0.18492036317075031 -3.2004877891392702
-		-0.01240206486246594 -0.18133845977170804 -3.2572919858849771
+		0.077326284368543385 -0.027811479442834047 -1.2578416346774659
+		0.075802448858323213 -0.023458138192752137 -1.3155595484547007
+		0.071189188226573052 -0.015357079302965787 -1.4308410444324084
+		0.061387488507303134 -0.007247187219149076 -1.6027449542725993
+		0.053322452068986503 -0.0025980617286139873 -1.7737515190582553
+		0.04553238404375648 -0.0082535784241642984 -1.9438477322249061
+		0.039382154213630234 -0.020697449353662606 -2.1137715352465181
+		0.030936943858554618 -0.055125685512658201 -2.2767687290035008
+		0.02296675233379919 -0.10130105258408832 -2.4351081473429068
+		0.014148774303098799 -0.14616381941408732 -2.5924044718632802
+		0.003909786060299787 -0.17890350403619182 -2.7524593720115642
+		-0.0039924650385259105 -0.19429889514288845 -2.9174658555140156
+		-0.0057804379811874831 -0.19036292023983403 -3.0865431852387273
+		-0.0064411057099970003 -0.18492036317075031 -3.2004877891392702
+		-0.0067536273675328157 -0.18133845977170804 -3.2572919858849771
 		;
-createNode transform -n "Petal1Curve10" -p "Flower1";
+createNode transform -n "Petal1Curve10" -p "FlowerCenter";
 	rename -uid "3F3F98C9-4E5A-435B-58AC-DF80071CFA6A";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -2739,7 +2753,7 @@ createNode transform -n "Petal1Curve10" -p "Flower1";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal1CurveShape10" -p "|Flower1|Petal1Curve10";
+createNode nurbsCurve -n "Petal1CurveShape10" -p "|FlowerCenter|Petal1Curve10";
 	rename -uid "D239D0E6-441F-28BE-AE94-B5A2590733C0";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -2764,7 +2778,7 @@ createNode nurbsCurve -n "Petal1CurveShape10" -p "|Flower1|Petal1Curve10";
 		-0.45736007473239737 -0.11217602068090365 -3.0489156305570537
 		-0.39959899800709581 -0.11892545335354934 -3.0642876272853998
 		;
-createNode transform -n "Petal1Curve9" -p "Flower1";
+createNode transform -n "Petal1Curve9" -p "FlowerCenter";
 	rename -uid "407678CF-4865-97A8-76D4-489CB049911A";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -2773,7 +2787,7 @@ createNode transform -n "Petal1Curve9" -p "Flower1";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal1CurveShape9" -p "|Flower1|Petal1Curve9";
+createNode nurbsCurve -n "Petal1CurveShape9" -p "|FlowerCenter|Petal1Curve9";
 	rename -uid "96A9BF2E-460E-D662-2CC6-DA88545F66AE";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -2784,19 +2798,19 @@ createNode nurbsCurve -n "Petal1CurveShape9" -p "|Flower1|Petal1Curve9";
 		15
 		0.63238391863535715 0.041022385326946242 -1.0924206892249091
 		0.67049551062653612 0.015125011801604325 -1.1409548869575075
-		0.73317802463573511 -0.039445926169445568 -1.2430500008508822
-		0.79866790541517263 -0.095919872790508995 -1.4017790702738235
-		0.83826805627802836 -0.10553798040467419 -1.5639402585144493
-		0.88751914267757159 -0.058313645164991774 -1.7335343470938649
-		0.91355350961907644 -0.048956313813286065 -1.9112458863211443
-		0.94587343733460083 -0.029946625849335967 -2.1249270074784574
-		0.94961878599454863 -0.025909868229278279 -2.3584694909411339
-		0.91078979932827586 -0.038943774073083484 -2.5732299379077119
-		0.83005129091057062 -0.065968569168266225 -2.7432021612519852
-		0.71585254747667282 -0.096809814328782398 -2.8697996878021677
-		0.58308527143943489 -0.12724838532876628 -2.9683570797891901
-		0.4898459772984825 -0.1448402124538937 -3.0261851492981733
-		0.44326116033337565 -0.15294135105361431 -3.0550645555047464
+		0.73406643101855462 -0.039445926169445568 -1.2430500008508822
+		0.80472139442938895 -0.095919872790508995 -1.4017790702738235
+		0.85318287483838051 -0.10553798040467419 -1.5639402585144493
+		0.91438543925815108 -0.058313645164991774 -1.7335343470938649
+		0.95253366915066895 -0.048956313813286065 -1.9112458863211441
+		0.99604842222121703 -0.029946625849335974 -2.1249270074784579
+		1.0043887401366913 -0.025909868229278276 -2.3584694909411339
+		0.96149725413780773 -0.038943774073083477 -2.5732299379077128
+		0.87157206522362374 -0.065968569168266225 -2.7432021612519857
+		0.74650961583369535 -0.096809814328782398 -2.8697996878021677
+		0.60282403434769594 -0.12724838532876628 -2.9683570797891901
+		0.50291263975602829 -0.1448402124538937 -3.0261851492981733
+		0.45331186107152588 -0.15294135105361431 -3.0550645555047464
 		;
 createNode transform -n "Vine";
 	rename -uid "B8639760-4337-9247-CB8F-14BC9BC86C66";
@@ -2846,12 +2860,12 @@ createNode nurbsCurve -n "VineCurveShape" -p "VineCurve";
 		8.4996583139377115 0 -11.845173672174088
 		9.184952594712577 0 -9.7507727005409297
 		;
-createNode transform -n "Flower2";
+createNode transform -n "FlowerCenter1";
 	rename -uid "F32F8223-4FA5-6F2D-9EED-D3AFAFE53BE8";
 	setAttr ".t" -type "double3" 0 0.058483110328267474 12.90370436651742 ;
 	setAttr ".r" -type "double3" -27.591477365256896 0 -28.2989808905613 ;
 	setAttr ".s" -type "double3" 1 0.40174204216311032 1 ;
-createNode mesh -n "Flower2Shape" -p "Flower2";
+createNode mesh -n "FlowerCenter1Shape" -p "FlowerCenter1";
 	rename -uid "594055EF-429D-B50E-FCB7-E998D6E27467";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -3982,11 +3996,11 @@ createNode mesh -n "Flower2Shape" -p "Flower2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal1" -p "Flower2";
+createNode transform -n "Petal1" -p "FlowerCenter1";
 	rename -uid "7EC3E32F-4751-1161-4227-AF915CAE3423";
 	setAttr ".t" -type "double3" 0 0 0.065165137045582355 ;
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape1" -p "|Flower2|Petal1";
+createNode mesh -n "PetalShape1" -p "|FlowerCenter1|Petal1";
 	rename -uid "6E28D72E-4F58-58F8-922D-B3810A3E8267";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -4630,10 +4644,10 @@ createNode mesh -n "PetalShape1" -p "|Flower2|Petal1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal5" -p "Flower2";
+createNode transform -n "Petal5" -p "FlowerCenter1";
 	rename -uid "B38313E1-4698-5897-7AB4-1389050FF681";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape5" -p "|Flower2|Petal5";
+createNode mesh -n "PetalShape5" -p "|FlowerCenter1|Petal5";
 	rename -uid "4A871470-4F9C-827A-C7E5-658DEAC83B78";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -5279,10 +5293,10 @@ createNode mesh -n "PetalShape5" -p "|Flower2|Petal5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal4" -p "Flower2";
+createNode transform -n "Petal4" -p "FlowerCenter1";
 	rename -uid "92EE5C10-4293-7A7D-6CEB-C187625C8B0E";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape4" -p "|Flower2|Petal4";
+createNode mesh -n "PetalShape4" -p "|FlowerCenter1|Petal4";
 	rename -uid "AD47FDC4-49DF-530A-E2E3-D080BCF616D1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -5928,10 +5942,10 @@ createNode mesh -n "PetalShape4" -p "|Flower2|Petal4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal3" -p "Flower2";
+createNode transform -n "Petal3" -p "FlowerCenter1";
 	rename -uid "82549709-4BC3-189D-5FE1-4CAB2EB6C0C7";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape3" -p "|Flower2|Petal3";
+createNode mesh -n "PetalShape3" -p "|FlowerCenter1|Petal3";
 	rename -uid "13F9847F-4E22-73E3-92FF-79BDA27AE658";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -6576,10 +6590,10 @@ createNode mesh -n "PetalShape3" -p "|Flower2|Petal3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal2" -p "Flower2";
+createNode transform -n "Petal2" -p "FlowerCenter1";
 	rename -uid "66F83052-4404-A378-20B6-538EEF89C9C5";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape2" -p "|Flower2|Petal2";
+createNode mesh -n "PetalShape2" -p "|FlowerCenter1|Petal2";
 	rename -uid "3E1C7BA8-4638-0F02-6C5C-ACAE49BD1D0E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -7225,7 +7239,7 @@ createNode mesh -n "PetalShape2" -p "|Flower2|Petal2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal3Curve7" -p "Flower2";
+createNode transform -n "Petal3Curve7" -p "FlowerCenter1";
 	rename -uid "8B0F9DFF-4677-AD1D-6D43-A89A9AD01C25";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -7234,7 +7248,7 @@ createNode transform -n "Petal3Curve7" -p "Flower2";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal3CurveShape7" -p "|Flower2|Petal3Curve7";
+createNode nurbsCurve -n "Petal3CurveShape7" -p "|FlowerCenter1|Petal3Curve7";
 	rename -uid "AE74757F-4AD6-3EE3-73CC-1EB1A8DF8F7E";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -7259,7 +7273,7 @@ createNode nurbsCurve -n "Petal3CurveShape7" -p "|Flower2|Petal3Curve7";
 		-0.0064411057099970003 -0.18492036317075031 -3.2004877891392702
 		-0.0067536273675328157 -0.18133845977170804 -3.2572919858849771
 		;
-createNode transform -n "Petal1Curve10" -p "Flower2";
+createNode transform -n "Petal1Curve10" -p "FlowerCenter1";
 	rename -uid "2BE11398-4FF4-9658-7773-2C871C9C9ED4";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -7268,7 +7282,7 @@ createNode transform -n "Petal1Curve10" -p "Flower2";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal1CurveShape10" -p "|Flower2|Petal1Curve10";
+createNode nurbsCurve -n "Petal1CurveShape10" -p "|FlowerCenter1|Petal1Curve10";
 	rename -uid "AB1F3CFA-4247-1D44-A8DA-AFA569F98BCF";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -7293,7 +7307,7 @@ createNode nurbsCurve -n "Petal1CurveShape10" -p "|Flower2|Petal1Curve10";
 		-0.45736007473239737 -0.11217602068090365 -3.0489156305570537
 		-0.39959899800709581 -0.11892545335354934 -3.0642876272853998
 		;
-createNode transform -n "Petal1Curve9" -p "Flower2";
+createNode transform -n "Petal1Curve9" -p "FlowerCenter1";
 	rename -uid "C55F7062-4C41-E074-2CDD-5F8740F306A4";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -7302,7 +7316,7 @@ createNode transform -n "Petal1Curve9" -p "Flower2";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal1CurveShape9" -p "|Flower2|Petal1Curve9";
+createNode nurbsCurve -n "Petal1CurveShape9" -p "|FlowerCenter1|Petal1Curve9";
 	rename -uid "070B1D40-4204-C996-C8F8-578325970180";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -7327,12 +7341,12 @@ createNode nurbsCurve -n "Petal1CurveShape9" -p "|Flower2|Petal1Curve9";
 		0.50291263975602829 -0.1448402124538937 -3.0261851492981733
 		0.45331186107152588 -0.15294135105361431 -3.0550645555047464
 		;
-createNode transform -n "Flower3";
+createNode transform -n "FlowerCenter2";
 	rename -uid "EF425910-4133-C644-DBB7-619CAF65200A";
 	setAttr ".t" -type "double3" -5.7745498662272183 0.040772704940877556 -8.5083714077040131 ;
 	setAttr ".r" -type "double3" 13.59810057184318 -95.246194545377833 0 ;
 	setAttr ".s" -type "double3" 1 0.40174204216311027 1 ;
-createNode mesh -n "Flower3Shape" -p "Flower3";
+createNode mesh -n "FlowerCenter2Shape" -p "FlowerCenter2";
 	rename -uid "2FF7E785-47F5-1A70-8636-858910DDB27A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -8463,11 +8477,11 @@ createNode mesh -n "Flower3Shape" -p "Flower3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal1" -p "Flower3";
+createNode transform -n "Petal1" -p "FlowerCenter2";
 	rename -uid "E4004E98-4EC6-DF90-B975-20BBD62EACCD";
 	setAttr ".t" -type "double3" 0 0 0.065165137045582355 ;
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape1" -p "|Flower3|Petal1";
+createNode mesh -n "PetalShape1" -p "|FlowerCenter2|Petal1";
 	rename -uid "31959FBC-491F-92EA-1595-D4979657DF79";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -9111,10 +9125,10 @@ createNode mesh -n "PetalShape1" -p "|Flower3|Petal1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal5" -p "Flower3";
+createNode transform -n "Petal5" -p "FlowerCenter2";
 	rename -uid "532F423E-462B-A1F9-AB1C-7A998726FF48";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape5" -p "|Flower3|Petal5";
+createNode mesh -n "PetalShape5" -p "|FlowerCenter2|Petal5";
 	rename -uid "861F9C74-4BF0-05C5-82B5-81B198D91D70";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -9760,10 +9774,10 @@ createNode mesh -n "PetalShape5" -p "|Flower3|Petal5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal4" -p "Flower3";
+createNode transform -n "Petal4" -p "FlowerCenter2";
 	rename -uid "12D28AFB-41C9-AFA0-910E-799FCF053A53";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape4" -p "|Flower3|Petal4";
+createNode mesh -n "PetalShape4" -p "|FlowerCenter2|Petal4";
 	rename -uid "F3D45C8C-4663-F70E-86F5-96BB50C2BCCA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -10409,10 +10423,10 @@ createNode mesh -n "PetalShape4" -p "|Flower3|Petal4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal3" -p "Flower3";
+createNode transform -n "Petal3" -p "FlowerCenter2";
 	rename -uid "7380365A-4181-8CC2-794A-5F82808451FE";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape3" -p "|Flower3|Petal3";
+createNode mesh -n "PetalShape3" -p "|FlowerCenter2|Petal3";
 	rename -uid "B569BE49-42D0-7E30-7243-278116885537";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -11057,10 +11071,10 @@ createNode mesh -n "PetalShape3" -p "|Flower3|Petal3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal2" -p "Flower3";
+createNode transform -n "Petal2" -p "FlowerCenter2";
 	rename -uid "4F2B9DDE-4989-0696-A417-0B84EDBB5D1C";
 	setAttr ".s" -type "double3" 1 2.4891594482262138 1 ;
-createNode mesh -n "PetalShape2" -p "|Flower3|Petal2";
+createNode mesh -n "PetalShape2" -p "|FlowerCenter2|Petal2";
 	rename -uid "58C4033D-4CFB-16AE-0202-3B9A1D9C53AF";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -11706,7 +11720,7 @@ createNode mesh -n "PetalShape2" -p "|Flower3|Petal2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Petal3Curve7" -p "Flower3";
+createNode transform -n "Petal3Curve7" -p "FlowerCenter2";
 	rename -uid "F617C517-4A0E-241C-6828-BCBA1C4825A8";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -11715,7 +11729,7 @@ createNode transform -n "Petal3Curve7" -p "Flower3";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal3CurveShape7" -p "|Flower3|Petal3Curve7";
+createNode nurbsCurve -n "Petal3CurveShape7" -p "|FlowerCenter2|Petal3Curve7";
 	rename -uid "3643CE86-4344-7428-4E64-11BD83397A11";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -11740,7 +11754,7 @@ createNode nurbsCurve -n "Petal3CurveShape7" -p "|Flower3|Petal3Curve7";
 		-0.0064411057099970003 -0.18492036317075031 -3.2004877891392702
 		-0.0067536273675328157 -0.18133845977170804 -3.2572919858849771
 		;
-createNode transform -n "Petal1Curve10" -p "Flower3";
+createNode transform -n "Petal1Curve10" -p "FlowerCenter2";
 	rename -uid "E5B8BE95-430F-312D-C378-2A9287A2F9AF";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -11749,7 +11763,7 @@ createNode transform -n "Petal1Curve10" -p "Flower3";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal1CurveShape10" -p "|Flower3|Petal1Curve10";
+createNode nurbsCurve -n "Petal1CurveShape10" -p "|FlowerCenter2|Petal1Curve10";
 	rename -uid "9F1AA3F8-45D8-FE08-B2D5-0191B2C3D0F9";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -11774,7 +11788,7 @@ createNode nurbsCurve -n "Petal1CurveShape10" -p "|Flower3|Petal1Curve10";
 		-0.45736007473239737 -0.11217602068090365 -3.0489156305570537
 		-0.39959899800709581 -0.11892545335354934 -3.0642876272853998
 		;
-createNode transform -n "Petal1Curve9" -p "Flower3";
+createNode transform -n "Petal1Curve9" -p "FlowerCenter2";
 	rename -uid "727AC2EF-4680-4F94-4623-46AA03B371DE";
 	setAttr ".t" -type "double3" -0.10970400763712418 0.0056312315400613147 -0.13813145313758968 ;
 	setAttr ".r" -type "double3" 0 213.29684487802123 0 ;
@@ -11783,7 +11797,7 @@ createNode transform -n "Petal1Curve9" -p "Flower3";
 	setAttr ".rpt" -type "double3" 0.56582954623679937 0 1.8921950224206396 ;
 	setAttr ".sp" -type "double3" 0 0 -1.2185907356213519 ;
 	setAttr ".spt" -type "double3" 0 0 0.18789225262933845 ;
-createNode nurbsCurve -n "Petal1CurveShape9" -p "|Flower3|Petal1Curve9";
+createNode nurbsCurve -n "Petal1CurveShape9" -p "|FlowerCenter2|Petal1Curve9";
 	rename -uid "97929F96-44AD-3193-1274-E7828F16C041";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -11808,19 +11822,6 @@ createNode nurbsCurve -n "Petal1CurveShape9" -p "|Flower3|Petal1Curve9";
 		0.50291263975602829 -0.1448402124538937 -3.0261851492981733
 		0.45331186107152588 -0.15294135105361431 -3.0550645555047464
 		;
-createNode transform -n "loftedSurface1";
-	rename -uid "CC378032-43D0-5477-D30D-AB9E5D00AB12";
-createNode mesh -n "loftedSurfaceShape1" -p "loftedSurface1";
-	rename -uid "4F50D2E0-4329-4740-27DC-27867FA92C15";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "41E99549-4330-25BA-2957-12B319347BDF";
 	setAttr -s 2 ".lnk";
@@ -11903,6 +11904,22 @@ createNode polyNormal -n "polyNormal4";
 	rename -uid "F4074607-442C-954F-A949-72A105A60CCD";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
+createNode loft -n "loft5";
+	rename -uid "59D6FA7F-41C6-0A4E-9104-57A868BCD1E2";
+	setAttr -s 3 ".ic";
+	setAttr ".u" yes;
+	setAttr ".rsn" yes;
+createNode nurbsTessellate -n "nurbsTessellate5";
+	rename -uid "81FD12A5-497E-EA5F-0E7C-DA91A2A3535B";
+	setAttr ".f" 2;
+	setAttr ".pt" 1;
+	setAttr ".chr" 0.9;
+	setAttr ".ucr" no;
+	setAttr ".cht" 0;
+createNode polyNormal -n "polyNormal6";
+	rename -uid "2B554E9B-4F36-AFFA-7167-8F8495C8474B";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".unm" no;
 createNode polyCylinder -n "polyCylinder1";
 	rename -uid "A8F75DCF-4176-A38F-F3BA-009DBA4DFE3A";
 	setAttr ".sc" 1;
@@ -11919,22 +11936,6 @@ createNode polyExtrudeFace -n "polyExtrudeFace1";
 	setAttr ".c[0]"  0 1 1;
 	setAttr ".cbn" -type "double3" -5.8173655953988641 -0.36596861900037614 18.895503874658658 ;
 	setAttr ".cbx" -type "double3" -5.1293861485124035 0.36231772608160573 19.134753766051414 ;
-createNode loft -n "loft1";
-	rename -uid "B8D8BB63-442B-9D63-D44C-2181AC4092D1";
-	setAttr -s 3 ".ic";
-	setAttr ".u" yes;
-	setAttr ".rsn" yes;
-createNode nurbsTessellate -n "nurbsTessellate1";
-	rename -uid "EB1EAF54-4621-5407-31AD-1583A9D0AF1B";
-	setAttr ".f" 2;
-	setAttr ".pt" 1;
-	setAttr ".chr" 0.9;
-	setAttr ".ucr" no;
-	setAttr ".cht" 0;
-createNode polyNormal -n "polyNormal5";
-	rename -uid "000F98F1-40DE-2D7E-9481-8E94BD33A000";
-	setAttr ".ics" -type "componentList" 1 "f[*]";
-	setAttr ".unm" no;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -11983,9 +11984,9 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "polyNormal4.out" "Flower1Shape.i";
+connectAttr "polyNormal4.out" "FlowerCenterShape.i";
+connectAttr "polyNormal6.out" "|FlowerCenter|Petal5|PetalShape5.i";
 connectAttr "polyExtrudeFace1.out" "VineShape.i";
-connectAttr "polyNormal5.out" "loftedSurfaceShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -11994,32 +11995,47 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polySphere1.out" "polyNormal3.ip";
 connectAttr "polyNormal3.out" "polyNormal4.ip";
+connectAttr "|FlowerCenter|Petal1Curve10|Petal1CurveShape10.ws" "loft5.ic[0]";
+connectAttr "|FlowerCenter|Petal3Curve7|Petal3CurveShape7.ws" "loft5.ic[1]";
+connectAttr "|FlowerCenter|Petal1Curve9|Petal1CurveShape9.ws" "loft5.ic[2]";
+connectAttr "loft5.os" "nurbsTessellate5.is";
+connectAttr "nurbsTessellate5.op" "polyNormal6.ip";
 connectAttr "polyCylinder1.out" "polyExtrudeFace1.ip";
 connectAttr "VineCurveShape.ws" "polyExtrudeFace1.ipc";
 connectAttr "VineShape.wm" "polyExtrudeFace1.mp";
-connectAttr "|Flower1|Petal1Curve10|Petal1CurveShape10.ws" "loft1.ic[0]";
-connectAttr "|Flower1|Petal3Curve7|Petal3CurveShape7.ws" "loft1.ic[1]";
-connectAttr "|Flower1|Petal1Curve9|Petal1CurveShape9.ws" "loft1.ic[2]";
-connectAttr "loft1.os" "nurbsTessellate1.is";
-connectAttr "nurbsTessellate1.op" "polyNormal5.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "Flower1Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower1|Petal2|PetalShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower1|Petal3|PetalShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower1|Petal4|PetalShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower1|Petal1|PetalShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "FlowerCenterShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "|FlowerCenter|Petal2|PetalShape2.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter|Petal3|PetalShape3.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter|Petal4|PetalShape4.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter|Petal5|PetalShape5.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter|Petal1|PetalShape1.iog" ":initialShadingGroup.dsm" -na
+		;
 connectAttr "VineShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Flower2Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower2|Petal1|PetalShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower2|Petal5|PetalShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower2|Petal4|PetalShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower2|Petal3|PetalShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower2|Petal2|PetalShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Flower3Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower3|Petal1|PetalShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower3|Petal5|PetalShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower3|Petal4|PetalShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower3|Petal3|PetalShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Flower3|Petal2|PetalShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "loftedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "FlowerCenter1Shape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "|FlowerCenter1|Petal1|PetalShape1.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter1|Petal5|PetalShape5.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter1|Petal4|PetalShape4.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter1|Petal3|PetalShape3.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter1|Petal2|PetalShape2.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "FlowerCenter2Shape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "|FlowerCenter2|Petal1|PetalShape1.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter2|Petal5|PetalShape5.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter2|Petal4|PetalShape4.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter2|Petal3|PetalShape3.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|FlowerCenter2|Petal2|PetalShape2.iog" ":initialShadingGroup.dsm" -na
+		;
 // End of Unit4_CurvesLab.ma
