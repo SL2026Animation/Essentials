@@ -5933,7 +5933,7 @@ GameObject:
   - component: {fileID: 670446577}
   - component: {fileID: 670446581}
   - component: {fileID: 670446582}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6892,7 +6892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1132265179
 MonoBehaviour:
   m_ObjectHideFlags: 0

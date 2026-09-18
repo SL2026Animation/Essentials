@@ -12,12 +12,12 @@ TagManager:
   - Water
   - UI
   - Level
-  - 
-  - 
-  - 
+  - Key Layer
+  - Wall Layer
+  - Chest Layer
   - Enemies
+  - Platform
   - 
-  - KeyLayer
   - PowerUps
   - 
   - 
