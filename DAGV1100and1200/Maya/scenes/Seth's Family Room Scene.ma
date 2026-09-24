@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Seth's Family Room Scene.ma
-//Last modified: Thu, Sep 24, 2026 10:46:22 AM
+//Last modified: Thu, Sep 24, 2026 10:49:17 AM
 //Codeset: 1252
 file -rdi 1 -ns "Floorboards" -rfn "FloorboardsRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//assets/Floorboards.ma";
@@ -38,12 +38,12 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "B76E8E8D-45A3-A2D3-61D1-B2855E6ADAED";
+fileInfo "UUID" "AE1901A2-419E-FA63-AF87-8AB0CA6783BE";
 createNode transform -s -n "persp";
 	rename -uid "BE02D595-46A2-FFE7-E1E7-93882D191F03";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.9845351619305625 14.634311858253101 56.143934460568005 ;
-	setAttr ".r" -type "double3" -14.138352729950785 351.39999999997195 0 ;
+	setAttr ".t" -type "double3" -35.999627998288616 20.473476040500273 41.482857284623449 ;
+	setAttr ".r" -type "double3" -19.538352729950869 320.99999999997118 1.0231522903052855e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B6252E6E-46BB-B890-F982-E4B8EF744E83";
 	setAttr -k off ".v" no;
