@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Ultimate_Handy_v1.0.2.ma
-//Last modified: Sat, Sep 26, 2026 01:47:01 PM
+//Last modified: Sat, Sep 26, 2026 01:49:06 PM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "F86B20C6-4C44-22C9-9466-AA93375917B3";
+fileInfo "UUID" "7FB5391A-48E9-0454-A8BC-2880E0DC1CBE";
 createNode transform -s -n "persp";
 	rename -uid "75740562-417E-044A-860C-CEB571123D8B";
 	setAttr ".v" no;
@@ -9562,8 +9562,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 24;
-	setAttr ".unw" 24;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".vac" 2;
 	setAttr ".etmr" no;
