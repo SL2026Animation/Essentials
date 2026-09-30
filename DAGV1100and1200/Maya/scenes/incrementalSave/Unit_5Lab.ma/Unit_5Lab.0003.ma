@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Unit_5Lab.ma
-//Last modified: Wed, Sep 23, 2026 07:38:08 PM
+//Last modified: Wed, Sep 23, 2026 07:38:00 PM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "UsdDefaultSettings" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.37.0";
@@ -10,13 +10,13 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "F8111F7E-49D4-9139-DCFD-A59AD7B8F965";
+fileInfo "UUID" "1D79B15B-4493-D6C8-7EB2-59974711DB73";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A2B6AC63-49D0-D24D-318E-1AB7E0E144C1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.0189253312573743 4.0461078628036526 7.8615949496405637 ;
-	setAttr ".r" -type "double3" -19.800000000000193 380.39999999996706 0 ;
+	setAttr ".t" -type "double3" -1.9698711048866215 3.3104521956246717 8.4143694165659397 ;
+	setAttr ".r" -type "double3" -15.000000000000149 347.19999999996793 0 ;
 	setAttr ".rpt" -type "double3" 1.0962734142955042e-16 8.4211577622465864e-17 2.8850002715858896e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7798FEC4-45AF-08E4-318F-A49276F88633";
