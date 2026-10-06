@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Unit_5B.ma
-//Last modified: Tue, Oct 06, 2026 05:05:10 PM
+//Last modified: Tue, Oct 06, 2026 05:05:04 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,11 +11,11 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "7661BCFE-40AA-28FA-14AC-53905320E631";
+fileInfo "UUID" "B0E8FCC3-4161-CBA1-D23F-428215AEC103";
 createNode transform -s -n "persp";
 	rename -uid "609B8372-4FF8-7777-AD94-D5A6AD4A6B07";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.69517100355116457 2.5350275365575254 2.4964737730868101 ;
+	setAttr ".t" -type "double3" -0.69517100355117023 2.5350275365575268 2.4964737730868087 ;
 	setAttr ".r" -type "double3" -15.464389681139989 975.80000000009784 0 ;
 	setAttr ".rp" -type "double3" 2.2247828579402551e-16 3.9968028886505635e-15 7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" 1.8738745171480594e-15 -5.4567582313093784e-16 -1.0624120574896295e-15 ;
@@ -23,7 +23,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "46A0FF91-4369-27E3-6904-B6B2826ABF9A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.6056844823340732;
+	setAttr ".coi" 3.6056844823340737;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -51135,8 +51135,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :modelPanel4ViewSelectedSet;
-	setAttr ".ihi" 0;
 connectAttr "polyTweakUV1.out" "Small_TableShapeShape.i";
 connectAttr "groupId1.id" "Small_TableShapeShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Small_TableShapeShape.iog.og[0].gco";
