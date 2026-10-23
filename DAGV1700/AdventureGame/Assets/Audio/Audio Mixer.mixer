@@ -71,7 +71,7 @@ AudioMixerController:
     - 401fde28fb94dc04f876ccc13116de56
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 3453731618598017513}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -127,7 +127,8 @@ AudioMixerSnapshotController:
   m_Name: Desert Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 3ad30ebbd31206a4289712f546b86b5e
-  m_FloatValues: {}
+  m_FloatValues:
+    ea4d7aa496347194d9c4ce7c514fc798: 0.04171297
   m_TransitionOverrides: {}
 --- !u!243 &6758385168739752460
 AudioMixerGroupController:

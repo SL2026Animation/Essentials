@@ -12,14 +12,14 @@ TagManager:
   - Water
   - UI
   - Level
-  - Key Layer
-  - Wall Layer
+  - Chest Key Layer
+  - Trap Key Layer
   - Chest Layer
   - Enemies
   - Platform
-  - 
+  - TrapTrigger
   - PowerUps
-  - 
+  - Background
   - 
   - PowerDowns
   - 
